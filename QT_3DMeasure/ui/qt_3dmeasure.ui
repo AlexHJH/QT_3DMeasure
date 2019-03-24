@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QT_3DMeasureClass</class>
+ <widget class="QMainWindow" name="QT_3DMeasureClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1800</width>
+    <height>1074</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>三维测量</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>141</width>
+      <height>1021</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>390</y>
+       <width>141</width>
+       <height>631</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="CameralistView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>141</width>
+       <height>111</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QVTKWidget" name="qvtkWidget3D">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>0</y>
+      <width>1241</width>
+      <height>1021</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_1">
+    <property name="geometry">
+     <rect>
+      <x>1385</x>
+      <y>1</y>
+      <width>411</width>
+      <height>1021</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenFile"/>
+    <addaction name="actionDeleteCache"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>相机</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>输出到文件</string>
+     </property>
+     <addaction name="actionToFileOpen"/>
+     <addaction name="actionToFileClose"/>
+    </widget>
+    <addaction name="actionScanUSB"/>
+    <addaction name="actionOpenCamera"/>
+    <addaction name="actionCloseCamera"/>
+    <addaction name="actionCalibrate"/>
+    <addaction name="menu_4"/>
+    <addaction name="actionCalibrateFromFile"/>
+    <addaction name="actionImportCamera"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>测量</string>
+    </property>
+    <addaction name="action3DMeasure"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionSetCameraZero"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </widget>
+  <action name="actionOpenFile">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionScanUSB">
+   <property name="text">
+    <string>扫描设备</string>
+   </property>
+  </action>
+  <action name="actionCalibrate">
+   <property name="text">
+    <string>L型标定</string>
+   </property>
+  </action>
+  <action name="action3DMeasure">
+   <property name="text">
+    <string>三维测量</string>
+   </property>
+  </action>
+  <action name="actionOpenCamera">
+   <property name="text">
+    <string>打开相机</string>
+   </property>
+  </action>
+  <action name="actionToFileOpen">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionToFileClose">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+  <action name="actionCloseCamera">
+   <property name="text">
+    <string>关闭相机</string>
+   </property>
+  </action>
+  <action name="actionCalibrateFromFile">
+   <property name="text">
+    <string>从文件标定</string>
+   </property>
+  </action>
+  <action name="actionImportCamera">
+   <property name="text">
+    <string>导入相机参数</string>
+   </property>
+  </action>
+  <action name="actionSetCameraZero">
+   <property name="text">
+    <string>设置相机0</string>
+   </property>
+  </action>
+  <action name="actionDeleteCache">
+   <property name="text">
+    <string>删除缓存文件</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="qt_3dmeasure.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,23 @@
+%YAML:1.0
+---
+BinaryTh: 200
+SizeLimit: 50
+CirqueLimt: 7
+StraightLimit: 1
+MarkNum: 4
+InterMat: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 10000, 0., 2744., 0., 10000, 1836., 0., 0., 1. ]
+WandMat: !!opencv-matrix
+   rows: 4
+   cols: 3
+   dt: d
+   data: [ 0., 0., 0., 150., 0., 0., 600., 0., 0., 0., 300., 0. ]
+distortMat: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ -0.09530873430606608, 0.8657164299247706, -0.0001160388496330624, -0.0003758635790053158, 0 ]
+CheckCount: 150
